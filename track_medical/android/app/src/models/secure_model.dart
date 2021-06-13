@@ -1,0 +1,24 @@
+
+class Secure {
+    Secure({
+        this.name,
+        this.type,
+        this.covered,
+    });
+
+    String name;
+    String type;
+    String covered;
+
+    factory Secure.fromJson(Map<String, dynamic> json) => Secure(
+        name: json["name"],
+        type: json["type"],
+        covered: json["covered"],
+    );
+
+    Map<String, dynamic> toJson() => {
+        "name": name,
+        "type": type,
+        "covered": covered,
+    };
+}
